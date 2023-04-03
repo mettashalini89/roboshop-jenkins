@@ -1,6 +1,8 @@
 terraform {
   required_providers {
-    source = "registry.terraform.io/taiidani/jenkins"
+    jenkins = {
+      source = "registry.terraform.io/taiidani/jenkins"
+    }
   }
 }
 
