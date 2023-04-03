@@ -1,4 +1,4 @@
-resource "jenkins_folder" "folders" {
+resource "jenkins_folder" "folder" {
   count = length(var.folders)
   name  = element(var.folders, count.index )
 }
