@@ -1,10 +1,10 @@
 variable "folders" {
-  default = ["infra"]
+  default = ["Infra"]
 }
 
 variable "jobs" {
   default = [
-    { name= "roboshop", folder= "infra", repo_url= "https://github.com/mettashalini89/Roboshop_infra"}
+    {name= "roboshop", folder= "Infra", repo_url= "https://github.com/mettashalini89/Roboshop_infra"}
 
   ]
 }
