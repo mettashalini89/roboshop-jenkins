@@ -2,7 +2,7 @@ variable "folders" {
   default = ["Infra", "CI-Pipeline"]
 }
 
-variable "jobs" {
+variable "m-jobs" {
   default = [
     {name= "roboshop", folder= "Infra", repo_url= "https://github.com/mettashalini89/Roboshop_infra"},
     {name= "frontend", folder= "CI-Pipeline", repo_url= "https://github.com/mettashalini89/frontend"},
@@ -13,4 +13,8 @@ variable "jobs" {
     {name= "shipping", folder= "CI-Pipeline", repo_url= "https://github.com/mettashalini89/shipping"}
 
   ]
+}
+
+variable "s-jobs" {
+  default = []
 }

@@ -19,7 +19,7 @@
     <triggers>
         <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin="multibranch-scan-webhook-trigger@1.0.9">
             <spec></spec>
-            <token>cart</token>
+            <token>${name}</token>
         </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
     </triggers>
     <disabled>false</disabled>
@@ -31,8 +31,8 @@
                     <apiUri>https://api.github.com</apiUri>
                     <credentialsId>github</credentialsId>
                     <repoOwner>mettashalini89</repoOwner>
-                    <repository>cart</repository>
-                    <repositoryUrl>https://github.com/mettashalini89/cart.git</repositoryUrl>
+                    <repository>${name}</repository>
+                    <repositoryUrl>${repo_url}</repositoryUrl>
                     <traits>
                         <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
                             <strategyId>1</strategyId>
