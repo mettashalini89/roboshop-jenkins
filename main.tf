@@ -9,8 +9,9 @@ resource "jenkins_job" "s-job" {
   name       = lookup(element(var.s-jobs, count.index ), "name", null)
   folder     = "/job/${lookup(element(var.s-jobs, count.index ), "folder", null)}"
   template   = templatefile("${path.module}/sb-job.xml", {
-    repo_url = lookup(element(var.s-jobs, count.index ), "repo_url", null),
+    repo_url = lookup(element(var.s-jobs, count.index ), "repo_url", null)
     name = lookup(element(var.s-jobs, count.index ), "name", null)
+    filename = lookup(element(var.s-jobs, count.index ), "filename", null)
   })
     lifecycle {
       ignore_changes = [template]
@@ -23,7 +24,7 @@ resource "jenkins_job" "m-job" {
   name       = lookup(element(var.m-jobs, count.index ), "name", null)
   folder     = "/job/${lookup(element(var.m-jobs, count.index ), "folder", null)}"
   template   = templatefile("${path.module}/mb-job.xml", {
-    repo_url = lookup(element(var.m-jobs, count.index ), "repo_url", null),
+    repo_url = lookup(element(var.m-jobs, count.index ), "repo_url", null)
     name = lookup(element(var.m-jobs, count.index ), "name", null)
   })
     lifecycle {
